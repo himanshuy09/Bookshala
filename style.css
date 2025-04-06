@@ -1,0 +1,236 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.header-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #b22222; /* red background */
+  padding: 15px 25px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.login-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .title {
+    font-size: 1.5 rem;
+  }
+  
+  .login-link {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  nav {
+    background-color: #a93535;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .slider {
+    width: 90%;              /* Increase width */
+    height: 300px;           /* Optional: control height */
+    overflow: hidden;
+    margin: 20px auto;       /* Center horizontally */
+    border-radius: 10px;
+    background-color: #0b060644;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.837);
+  }
+  
+  .slides {
+    display: flex;
+    width: 50%;
+    height: 200%;
+    gap: 35px;
+    animation: slide 10s infinite;
+  }
+  
+  .slides img {
+    width: 200%;
+    height: 50%;
+    object-fit: cover;       /* Crop and fill image nicely */
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+  }
+  
+  .section {
+    padding: 20px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    max-width: 1200;
+  }
+  
+  .books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+  }
+  
+  .book {
+    width: 150px;
+    height: 30%;
+    text-align: center;
+  }
+  
+  .book img {
+    width: 140px;           /* Fixed width */
+    height: 200px;          /* Fixed height */
+    object-fit: box;      /* Crop and fill without distortion */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .book {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .book {
+      width: 90%;
+    }
+  
+    .slider {
+      height: 200px;
+    }
+  }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #0b0a0a;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #f4efef;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+  
+  .footer-section h2,
+  .footer-section h3 {
+    margin-bottom: 10px;
+    color: #f3efef;
+  }
+  
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #d71010;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
