@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Social links
   document.getElementById("insta-link")?.addEventListener("click", () => {
-    window.open("https://instagram.com/iam_himanshuydv_", "_blank");
+    window.open("https://instagram.com/_bookshala__", "_blank");
   });
 
   document.getElementById("whatsapp-link")?.addEventListener("click", () => {
