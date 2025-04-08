@@ -15,12 +15,23 @@
     <div class="header-center">
       <nav class="navbar">
         <a href="#" class = "nav-link"id="home-link">Home</a>
-        <a href="#"class = "nav-link"id="category-link">Categories</a>
+        <div class="dropdown">
+          <a href="#" class="nav-link">Categories</a>
+          <div class="dropdown-content">
+            <a href="novel.html" class="novel-link"data-category="novel">Novel</a>
+            <a href="computer.html" class="computer-link" data-category="computer">Computer Languages</a>
+            <a href="notes.html" class="notes-link" data-category="Notes">Notes</a>
+            <a href="motivational.html" class="motivational-link" data-category="motivational">Motivational</a>
+            <a href="used.html" class="used-link" data-category="used">Used Books</a>
+            <a href="pyq.html" class="pyq-link" data-category="pyq">PYQ</a>
+          </div>
+        </div>
         <a href="#latest-section">Latest</a>
         <a href="#used-section">Used Books</a>
         <a href="#contact-section">Contact Us</a>
-        <a href="#"class = "nav-link"id="upload-link">Upload Book</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScZ71p_vCG5CRuVuvcdDKEKknqMKN9QW-n6rRk8c_g6phWq2Q/viewform?usp=dialog"class= "nav-link"id="upload-link">Upload Book</a>
         <input type="text" id="search-input" placeholder="Search books..." class="search-input">
+        <div id="search-message"class="search-message"></div>
       </nav>
     </div>
   
@@ -50,19 +61,22 @@
   <div id="latest-section">
     <h1>Latest Books</h1>
     <div class="books">
-      <div class="book">
+      <div class="book"
+      data-title="Data Structure Using C++">
         <img src="book1.jpg" alt="Book 1" />
         <p>Data Structure Using C++
           <br><h4> ₹ 320</h4>
         </p>
       </div>
-      <div class="book">
+      <div class="book"
+      data-title="Computer Science & Information Technology">
         <img src="book2.jpg" alt="Book 2" />
         <p>Computer Science & Information Technology
           <br><h4> ₹ 215</h4>
         </p>
       </div>
-      <div class="book">
+      <div class="book"
+      data-title="Computer Fundamentals">
         <img src="book3.jpg" alt="Book 3" />
         <p>Computer Fundamentals
           <br><h4> ₹ 468</h4>
@@ -198,6 +212,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="category-animation.js"></script>
 </body>
 <footer class="footer">
   <div class="footer-section">
