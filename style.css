@@ -38,12 +38,55 @@ html{
   gap: 1rem;
   flex-wrap: wrap;
 }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.category-link:hover {
+  background-color: #ddd;
+}
+.book {
+  transition: border 0.3s ease;
+}
+
+.book:target, .book.highlighted {
+  border: 3px solid #ff6600;
+  box-shadow: 0 0 10px #ff6600;
+}
 
 .search-input {
   padding: 8px 14px;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
+}
+.search-message {
+  color: rgb(238, 230, 15);
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  display: none;
 }
 
 .header-right {
@@ -117,7 +160,7 @@ body {
     width: 50%;
     height: 200%;
     gap: 35px;
-    animation: slide 10s infinite;
+    animation: slide 20s infinite;
   }
   
   .slides img {
