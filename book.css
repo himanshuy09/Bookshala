@@ -33,3 +33,30 @@
 .check-delivery input { padding: 10px; width: 180px; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px; }
 
 .check-delivery button { padding: 10px 16px; background: #f45b2a; border: none; color: white; border-radius: 4px; cursor: pointer; }
+/* respnsive*/
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .book {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .book {
+      width: 90%;
+    }
+  
+    .slider {
+      height: 200px;
+    }
+  }
