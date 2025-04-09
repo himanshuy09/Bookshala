@@ -37,6 +37,11 @@ categoryLinks.forEach(link => {
     // You can later replace this alert with code to filter book cards
   });
 });
+// for home button
+document.getElementById("index-link")?.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "index.html";
+});
   // Redirect for specific nav items
   document.getElementById("latest-link")?.addEventListener("click", (e) => {
     e.preventDefault();
