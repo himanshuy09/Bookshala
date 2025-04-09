@@ -20,6 +20,21 @@ html{
   font-weight: bold;
   color: white;
 }
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 80px; /* adjust size as needed */
+  margin-right: 10px;
+}
+
+.site-title {
+  font-size: 28px; /* or match what you were using */
+  font-weight: bold;
+  color: white; /* adjust as needed */
+}
 
 .header-center {
   flex: 2;
@@ -187,7 +202,7 @@ body {
   .books {
     display: flex;
     flex-wrap: wrap;
-    gap: 35px;
+    gap: 15px;
     justify-content: center;
   }
   
@@ -198,8 +213,8 @@ body {
   }
   
   .book img {
-    width: 140px;           /* Fixed width */
-    height: 200px;          /* Fixed height */
+    width: 120px;           /* Fixed width */
+    height: 170px;          /* Fixed height */
     object-fit: box;      /* Crop and fill without distortion */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -276,7 +291,7 @@ body {
   }
   
   .social-icons img {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
   }
