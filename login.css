@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(120deg, #6023b0, #472cb4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-box {
+    width: 350px;
+    background: rgba(23, 17, 13, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    animation: floatBox 1s ease forwards;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes floatBox {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .login-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .login-box button {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    background: #2980b9;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .login-box button:hover {
+    background: #1f6692;
+  }
+  
+  .login-box p {
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  .login-box a {
+    color: #ecf0f1;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .toggle-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .toggle-buttons button {
+    width: 48%;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+  }
