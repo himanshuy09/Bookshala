@@ -1,125 +1,236 @@
-/* Add to your existing CSS or replace relevant sections */
+/* book.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
 
-.container {
+.book-container {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  gap: 40px;
   max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.book-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-left img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-right {
+  flex: 2;
+}
+
+.book-right h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.book-right p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.book-right h3 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-.book-image {
-  flex: 1 1 300px;
-  text-align: center;
+.buttons button {
+  padding: 10px 20px;
+  border: 2px solid #f45b2a;
+  background: #fff;
+  color: #f45b2a;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
-.book-image img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-}
-
-.book-info {
-  flex: 2 1 400px;
-}
-
-.book-info h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.book-info p,
-.book-info .price {
-  font-size: 1rem;
-}
-
-.book-info .buttons {
-  margin: 15px 0;
-}
-
-.book-info .buttons button {
-  margin-right: 10px;
+.buttons button:hover {
+  background: #f45b2a;
+  color: white;
 }
 
 .highlights {
-  margin-top: 20px;
+  margin-top: 30px;
+}
+
+.highlights h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #444;
 }
 
 .highlights ul {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
 }
 
 .highlights li {
-  margin-bottom: 8px;
+  font-size: 15px;
+  padding: 4px 0;
+  border-bottom: 1px dashed #ddd;
+  color: #333;
 }
 
-.check-pincode {
-  margin-top: 15px;
+.check-delivery {
+  margin-top: 30px;
 }
 
-.check-pincode input {
-  padding: 5px;
-  width: 150px;
-  margin-right: 5px;
-}
-
-/* Responsive Footer */
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  background: #111;
-  color: white;
-}
-
-.footer-column {
-  flex: 1 1 200px;
+.check-delivery input {
   padding: 10px;
+  width: 180px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
 }
 
-.footer-column h4 {
-  margin-bottom: 10px;
-}
-
-.footer-column a {
-  display: block;
-  margin: 5px 0;
+.check-delivery button {
+  padding: 10px 16px;
+  background: #f45b2a;
+  border: none;
   color: white;
-  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.footer-column a:hover {
-  text-decoration: underline;
-}
-
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
-  .container {
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .book-container {
     flex-direction: column;
-    padding: 10px;
+    padding: 20px;
   }
 
-  .book-image,
-  .book-info {
-    flex: 1 1 100%;
-  }
-
-  .book-info h2 {
-    font-size: 1.5rem;
-  }
-
-  .book-info .buttons button {
+  .book-left, .book-right {
     width: 100%;
-    margin: 5px 0;
   }
 
-  .footer {
+  .book-right h2 {
+    font-size: 24px;
+  }
+
+  .book-right h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-container {
+    padding: 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .book-right h2 {
+    font-size: 22px;
+  }
+
+  .book-right p, .highlights li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-right h2 {
+    font-size: 20px;
+  }
+
+  .check-delivery input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .check-delivery {
+    display: flex;
     flex-direction: column;
   }
 
-  .footer-column {
+  .check-delivery button {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .book-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .book-left,
+  .book-right {
+    width: 100%;
+  }
+
+  .book-left {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .book-right h2 {
+    font-size: 24px;
+  }
+
+  .book-right h3 {
+    font-size: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons button {
+    width: 100%;
     text-align: center;
+  }
+
+  .check-delivery input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .check-delivery button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-right h2 {
+    font-size: 20px;
+  }
+
+  .book-right p,
+  .highlights li {
+    font-size: 14px;
+  }
+
+  .highlights h4 {
+    font-size: 18px;
   }
 }
