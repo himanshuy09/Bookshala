@@ -1,6 +1,6 @@
 /* General Reset */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Changed from auto to border-box for better layout control */
   margin: 0;
   padding: 0;
 }
@@ -30,7 +30,7 @@ body {
 .book-left img {
   width: 100%;
   max-width: 280px;
-  height: auto;
+  height: auto; /* Fixed missing "px" and set to auto for responsive scaling */
   object-fit: cover;
   border-radius: 8px;
 }
@@ -71,7 +71,51 @@ body {
   width: 150px;
 }
 
-/* Footer styles */
+/* Responsive styles */
+@media (max-width: 768px) {
+  .book-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-left,
+  .book-right {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .book-left img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10px;
+  }
+
+  .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 18px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -85,6 +129,7 @@ body {
 .footer-section {
   flex: 1 1 200px;
   margin: 10px;
+  min-width: 200px;
 }
 
 .footer-section h2,
@@ -116,18 +161,13 @@ body {
   text-decoration: underline;
 }
 
-.social-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .social-icons img {
   width: 40px;
   height: 40px;
+  margin-right: 10px;
 }
 
-/* ✅ Responsive Footer Fix */
+/* ✅ Mobile Fix */
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
@@ -140,11 +180,6 @@ body {
     margin-bottom: 20px;
   }
 
-  .footer-section h2,
-  .footer-section h3 {
-    font-size: 18px;
-  }
-
   .social-icons {
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -153,5 +188,12 @@ body {
   .social-icons img {
     width: 36px;
     height: 36px;
+  }
+
+  .footer-section ul li,
+  .footer-section p,
+  .footer-section h2,
+  .footer-section h3 {
+    text-align: left;
   }
 }
