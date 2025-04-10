@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Bookshala - Buy used and new books online" />
   <link rel="stylesheet" href="book.css" />
   <link rel="stylesheet" href="style.css" />
   <title>Book Detail</title>
@@ -40,8 +42,8 @@
       <h3 id="book-price"></h3>
 
       <div class="buttons">
-        <button>Add to Cart</button>
-        <button>Buy Now</button>
+        <button onclick="alert('Added to Cart')">Add to Cart</button>
+        <button onclick="alert('Redirecting to Payment')">Buy Now</button>        
       </div>
 
       <div class="highlights">
@@ -60,8 +62,9 @@
 
       <div class="check-delivery">
         <label>Enter Pincode</label>
-        <input type="text" placeholder="Enter Pincode" />
-        <button>Check</button>
+        <input type="text" id="pincode" placeholder="Enter Pincode" />
+         <button onclick="checkDelivery()">Check</button>
+
       </div>
     </div>
   </div>
@@ -90,7 +93,6 @@
 
 </body>
 <footer class="footer">
-  <link rel="stylesheet" href="book.css" />
   <div class="footer-section">
     <h2>Bookshala</h2>
     <p>
@@ -132,8 +134,8 @@
 
   <div class="footer-section">
     <h3>Support</h3>
-    <p><strong>Call:</strong> +91 9289663498 , +91 7827049253</p>
-    <p><strong>Email:</strong> bookshala18@gmail.com</p>
+    <p><strong>Call:</strong> +91 9289663498 , <br> +91 7827049253</p>
+    <p><strong>Email:</strong> <br>bookshala18@gmail.com</p>
   </div>
 
 </footer>
