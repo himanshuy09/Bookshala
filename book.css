@@ -1,6 +1,6 @@
 /* General Reset */
 * {
-  box-sizing: auto;
+  box-sizing: border-box; /* Changed from auto to border-box for better layout control */
   margin: 0;
   padding: 0;
 }
@@ -30,7 +30,7 @@ body {
 .book-left img {
   width: 100%;
   max-width: 280px;
-  height: 200;
+  height: auto; /* Fixed missing "px" and set to auto for responsive scaling */
   object-fit: cover;
   border-radius: 8px;
 }
@@ -89,7 +89,34 @@ body {
     height: auto;
   }
 
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10px;
+  }
+
+  .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 18px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
 }
+
+/* Footer styles */
 .footer {
   display: flex;
   flex-wrap: wrap;
