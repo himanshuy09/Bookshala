@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Bookshala - Buy used and new books online" />
-  <link rel="stylesheet" href="book.css" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Bookshala - Buy used and new books online" />
+  <link rel="stylesheet"href="book.css"/>
+  <link rel="stylesheet"href="style.css"/>
   <title>Book Detail</title>
 </head>
 <body>
   <div class="header-center">
     <nav class="navbar">
-      <a href="index.html" class = "nav-link"id="index-link">Home</a>
+      <a href="index.html" class="nav-link" id="index-link">Home</a>
       <div class="dropdown">
         <a href="category-animation.js" class="category-link">Categories</a>
         <div class="dropdown-content">
-          <a href="novel.html" class="novel-link"data-category="novel">Novel</a>
+          <a href="novel.html" class="novel-link" data-category="novel">Novel</a>
           <a href="computer.html" class="computer-link" data-category="computer">Computer Languages</a>
           <a href="notes.html" class="notes-link" data-category="Notes">Notes</a>
           <a href="motivational.html" class="motivational-link" data-category="motivational">Motivational</a>
@@ -24,17 +24,16 @@
       </div>
       <a href="used.html">Used Books</a>
       <a href="#contact-section">Contact Us</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScZ71p_vCG5CRuVuvcdDKEKknqMKN9QW-n6rRk8c_g6phWq2Q/viewform?usp=dialog"class= "nav-link"id="upload-link">Upload Book</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScZ71p_vCG5CRuVuvcdDKEKknqMKN9QW-n6rRk8c_g6phWq2Q/viewform?usp=dialog" class="nav-link" id="upload-link">Upload Book</a>
     </nav>
   </div>
   <br>
   <h2></h2>
-  <!-- Your red navigation bar here (unchanged) -->
 
   <div class="book-container">
     <div class="book-left">
-      <img id="book-img" src="latest-section" alt="Book Cover">
-
+      <img id="book-img" src="" >
+      <img id="book-img" src="" >
     </div>
     <div class="book-right">
       <h2 id="book-title">Title</h2>
@@ -64,8 +63,7 @@
       <div class="check-delivery">
         <label>Enter Pincode</label>
         <input type="text" id="pincode" placeholder="Enter Pincode" />
-         <button onclick="checkDelivery()">Check</button>
-
+        <button onclick="checkDelivery()">Check</button>
       </div>
     </div>
   </div>
@@ -74,7 +72,7 @@
   <script src="script.js"></script>
   <script>
     const book = JSON.parse(localStorage.getItem('selectedBook'));
-  
+
     if (book) {
       document.getElementById('book-img').src = book.image;
       document.getElementById('book-title').textContent = book.title;
@@ -99,15 +97,14 @@
     <p>
       Ever wanted to buy a book but could not because it was too expensive? Worry not! Because Bookshala is here!
       Bookshala is being called as the Robinhood of the world of books.
-      <br>
-      <br><h4> Founder : Mr.Himanshu</h4>
+      <br><br>
+      <h4>Founder : Mr.Himanshu</h4>
       <h4>Co-Founder : Mr. Pranav Sharma</h4>
-      <br>
-      <br>
+      <br><br>
     </p>
     <div class="social-icons">
-      <a href="https://www.instagram.com/_bookshala__/"id="insta-link" target="_blank"><img src="instagram.jpg" alt="Instagram" /></a>
-      <a href="https://api.whatsapp.com/send/?phone=%2B919289663498&text&type=phone_number&app_absent=0"id="whatsapp-link" target="_blank"><img src="whatsapp.jpg" alt="WhatsApp" /></a>
+      <a href="https://www.instagram.com/bookshala_/" id="insta-link" target="_blank"><img src="instagram.jpg" alt="Instagram" /></a>
+      <a href="https://api.whatsapp.com/send/?phone=%2B919289663498&text&type=phone_number&app_absent=0" id="whatsapp-link" target="_blank"><img src="whatsapp.jpg" alt="WhatsApp" /></a>
     </div>
   </div>
 
@@ -138,6 +135,5 @@
     <p><strong>Call:</strong> +91 9289663498 , <br> +91 7827049253</p>
     <p><strong>Email:</strong> <br>bookshala18@gmail.com</p>
   </div>
-
 </footer>
 </html>
